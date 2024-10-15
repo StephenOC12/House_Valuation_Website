@@ -1,0 +1,55 @@
+{% extends "base.html" %}{% block title %}Register{% endblock %}
+{% block content %}
+
+<form method="POST">
+    <h3 algin="center">Register</h3>
+    <div class="form-group">
+        <label for="EmailAddressPython">Email Address</label>
+        <input type="EmailAddressPython"
+               class="form-control"
+               id="EmailAddressPython"
+               name="EmailAddressPython"
+               placeholder="Enter Email Address"
+        />
+    </div>
+    <div class="form-group">
+        <label for="PhoneNumberPython">Phone Number</label>
+        <input type="PhoneNumberPython"
+               class="form-control"
+               id="PhoneNumberPython"
+               name="PhoneNumberPython"
+               placeholder="Enter Phone Number"
+        />
+    </div>
+    <div class="form-group">
+        <label for="UsernamePython">Username</label>
+        <input type="text"
+               class="form-control"
+               id="UsernamePython"
+               name="UsernamePython"
+               placeholder="Enter Username"
+        />
+    </div>
+    <div class="form-group">
+        <label for="PasswordPython">Password</label>
+        <input type="password"
+               class="form-control"
+               id="PasswordPython"
+               name="PasswordPython"
+               placeholder="Enter Password"
+        />
+    </div>
+    <div class="form-group">
+        <label for="PasswordAuth">Confirm Password</label>
+        <input type="password"
+               class="form-control"
+               id="PasswordAuth"
+               name="PasswordAuth"
+               placeholder="Confirm Password"
+        />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}

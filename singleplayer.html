@@ -1,0 +1,216 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container" align="center">
+  <div class="row">
+    <div class="col-sm">
+      <table>
+        <thead>
+          <tr>
+            <th>---House info---</th>
+            <th>This House---</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>price:</td>
+            <td>{{ resultHouse[2] }}</td>
+          </tr>
+          <tr>
+            <td>date:</td>
+            <td>{{ resultHouse[1] }}</td>
+          </tr>
+          <tr>
+            <td>bedrooms:</td>
+            <td>{{ resultHouse[3] }}</td>
+          </tr>
+          <tr>
+            <td>bathrooms:</td>
+            <td>{{ resultHouse[4] }}</td>
+          </tr>
+          <tr>
+            <td>sqft_living:</td>
+            <td>{{ resultHouse[5] }}</td>
+          </tr>
+          <tr>
+            <td>sqft_lot:</td>
+            <td>{{ resultHouse[6] }}</td>
+          </tr>
+          <tr>
+            <td>floors:</td>
+            <td>{{ resultHouse[7] }}</td>
+          </tr>
+          <tr>
+            <td>waterfront:</td>
+            <td>{{ resultHouse[8] }}</td>
+          </tr>
+          <tr>
+            <td>view:</td>
+            <td>{{ resultHouse[9] }}</td>
+          </tr>
+          <tr>
+            <td>condition:</td>
+            <td>{{ resultHouse[10] }}</td>
+          </tr>
+          <tr>
+            <td>grade:</td>
+            <td>{{ resultHouse[11] }}</td>
+          </tr>
+          <tr>
+            <td>sqft_above:</td>
+            <td>{{ resultHouse[12] }}</td>
+          </tr>
+          <tr>
+            <td>sqft_basement:</td>
+            <td>{{ resultHouse[13] }}</td>
+          </tr>
+          <tr>
+            <td>yr_built:</td>
+            <td>{{ resultHouse[14] }}</td>
+          </tr>
+          <tr>
+            <td>yr_renovated:</td>
+            <td>{{ resultHouse[15] }}</td>
+          </tr>
+          <tr>
+            <td>zipcode:</td>
+            <td>{{ resultHouse[16] }}</td>
+          </tr>
+          <tr>
+            <td>latitude:</td>
+            <td>{{ resultHouse[17] }}</td>
+          </tr>
+          <tr>
+            <td>longitude:</td>
+            <td>{{ resultHouse[18] }}</td>
+          </tr>
+          <tr>
+            <td>sqft_living15:</td>
+            <td>{{ resultHouse[19] }}</td>
+          </tr>
+          <tr>
+            <td>sqft_lot15:</td>
+            <td>{{ resultHouse[20] }}</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-sm">
+      <table>
+        <thead>
+          <tr>
+            <th>---House info---</th>
+            <th>This House---</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>price:</td>
+            <td>???</td>
+          </tr>
+          <tr>
+            <td>date:</td>
+            <td>{{ secondHouse[1] }}</td>
+          </tr>
+          <tr>
+            <td>bedrooms:</td>
+            <td>{{ secondHouse[3] }}</td>
+          </tr>
+          <tr>
+            <td>bathrooms:</td>
+            <td>{{ secondHouse[4] }}</td>
+          </tr>
+          <tr>
+            <td>sqft_living:</td>
+            <td>{{ secondHouse[5] }}</td>
+          </tr>
+          <tr>
+            <td>sqft_lot:</td>
+            <td>{{ secondHouse[6] }}</td>
+          </tr>
+          <tr>
+            <td>floors:</td>
+            <td>{{ secondHouse[7] }}</td>
+          </tr>
+          <tr>
+            <td>waterfront:</td>
+            <td>{{ secondHouse[8] }}</td>
+          </tr>
+          <tr>
+            <td>view:</td>
+            <td>{{ secondHouse[9] }}</td>
+          </tr>
+          <tr>
+            <td>condition:</td>
+            <td>{{ secondHouse[10] }}</td>
+          </tr>
+          <tr>
+            <td>grade:</td>
+            <td>{{ secondHouse[11] }}</td>
+          </tr>
+          <tr>
+            <td>sqft_above:</td>
+            <td>{{ secondHouse[12] }}</td>
+          </tr>
+          <tr>
+            <td>sqft_basement:</td>
+            <td>{{ secondHouse[13] }}</td>
+          </tr>
+          <tr>
+            <td>yr_built:</td>
+            <td>{{ secondHouse[14] }}</td>
+          </tr>
+          <tr>
+            <td>yr_renovated:</td>
+            <td>{{ secondHouse[15] }}</td>
+          </tr>
+          <tr>
+            <td>zipcode:</td>
+            <td>{{ secondHouse[16] }}</td>
+          </tr>
+          <tr>
+            <td>latitude:</td>
+            <td>{{ secondHouse[17] }}</td>
+          </tr>
+          <tr>
+            <td>longitude:</td>
+            <td>{{ secondHouse[18] }}</td>
+          </tr>
+          <tr>
+            <td>sqft_living15:</td>
+            <td>{{ secondHouse[19] }}</td>
+          </tr>
+          <tr>
+            <td>sqft_lot15:</td>
+            <td>{{ secondHouse[20] }}</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="btn btn-success"
+onclick="window.location.href='{%if resultHouse[2] < secondHouse[2] %}{{ url_for( 'views.showHouseInfo') }}{% endif %}'"
+style="
+margin: 0;
+position: absolute;
+top: 40%;
+left: 50%;
+transform: translate(-97.5%, -100%);">Higher</button>
+
+
+
+<button type="button" class="btn btn-danger"
+onclick="window.location.href='{%if resultHouse[2] < secondHouse[2] %}{{ url_for( 'views.showHouseInfo') }}{% endif %}'"
+style="
+margin: 0;
+position: absolute;
+top: 45%;
+left: 50%;
+transform: translate(-100%, -90%);">Lower</button>
+{% endblock %}

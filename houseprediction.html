@@ -1,0 +1,199 @@
+{% extends "base.html" %}{% block title %}Valuation{% endblock %}
+{% block content %}
+
+<form method="POST">
+    <h3 algin="center">Valuation</h3>
+    <div class="form-group">
+        <label for="usernameInput">Username</label>
+        <input type="text"
+               class="form-control"
+               id="usernameInput"
+               name="usernameInput"
+               placeholder="e.g. playerone"
+        />
+    </div>
+    <div class="form-group">
+        <label for="addressInput">Address</label>
+        <input type="text"
+               class="form-control"
+               id="addressInput"
+               name="addressInput"
+               placeholder="e.g. 15 new road"
+        />
+    </div>
+    <div class="form-group">
+        <label for="bedroomInput">Bedrooms</label>
+        <input type="text"
+               class="form-control"
+               id="bedroomInput"
+               name="bedroomInput"
+               placeholder="e.g. 3"
+        />
+    </div>
+    <div class="form-group">
+        <label for="bathroomInput">Bathrooms</label>
+        <input type="text"
+               class="form-control"
+               id="bathroomInput"
+               name="bathroomInput"
+               placeholder="e.g. 2"
+        />
+    </div>
+    <div class="form-group">
+        <label for="sqftLivingInput">Sqft of Living Room</label>
+        <input type="text"
+               class="form-control"
+               id="sqftLivingInput"
+               name="sqftLivingInput"
+               placeholder="e.g. 1500"
+        />
+    </div>
+    <div class="form-group">
+        <label for="sqftLotInput">Sqft of Lot</label>
+        <input type="text"
+               class="form-control"
+               id="sqftLotInput"
+               name="sqftLotInput"
+               placeholder="e.g. 3500"
+        />
+    </div>
+    <div class="form-group">
+        <label for="floorInput">Floors</label>
+        <input type="text"
+               class="form-control"
+               id="floorInput"
+               name="floorInput"
+               placeholder="e.g. 2"
+        />
+    </div>
+    <div class="form-group">
+        <label for="waterfrontInput">Does it have a waterfront? (0 for no, 1 for yes)</label>
+        <input type="text"
+               class="form-control"
+               id="waterfrontInput"
+               name="waterfrontInput"
+               placeholder="e.g. 0"
+        />
+    </div>
+    <div class="form-group">
+        <label for="viewInput">How good is the view (0-4) </label>
+        <input type="text"
+               class="form-control"
+               id="viewInput"
+               name="viewInput"
+               placeholder="e.g. 0"
+        />
+    </div>
+    <div class="form-group">
+        <label for="conditionInput">How good is the condition (1-5)</label>
+        <input type="text"
+               class="form-control"
+               id="conditionInput"
+               name="conditionInput"
+               placeholder="e.g. 3"
+        />
+    </div>
+    <div class="form-group">
+        <label for="gradeInput">what score is the grade (1-13)</label>
+        <input type="text"
+               class="form-control"
+               id="gradeInput"
+               name="gradeInput"
+               placeholder="e.g. 7"
+        />
+    </div>
+    <div class="form-group">
+        <label for="sqftAboveInput">Sqft_Above</label>
+        <input type="text"
+               class="form-control"
+               id="sqftAboveInput"
+               name="sqftAboveInput"
+               placeholder="e.g. 1500"
+        />
+    </div>
+    <div class="form-group">
+        <label for="sqftBasementInput">Sqft_Basement</label>
+        <input type="text"
+               class="form-control"
+               id="sqftBasementInput"
+               name="sqftBasementInput"
+               placeholder="e.g. 0"
+        />
+    </div>
+    <div class="form-group">
+        <label for="yrBuiltInput">Yr_Built</label>
+        <input type="text"
+               class="form-control"
+               id="yrBuiltInput"
+               name="yrBuiltInput"
+               placeholder="e.g. 1995"
+        />
+    </div>
+    <div class="form-group">
+        <label for="yrRenovatedInput">Yr_Renovated (0 if not)</label>
+        <input type="text"
+               class="form-control"
+               id="yrRenovatedInput"
+               name="yrRenovatedInput"
+               placeholder="e.g. 0"
+        />
+    </div>
+    <div class="form-group">
+        <label for="zipcodeInput">ZIPCode</label>
+        <input type="text"
+               class="form-control"
+               id="zipcodeInput"
+               name="zipcodeInput"
+               placeholder="e.g. 98030"
+        />
+    </div>
+    <div class="form-group">
+        <label for="latInput">Latitude</label>
+        <input type="text"
+               class="form-control"
+               id="latInput"
+               name="latInput"
+               placeholder="e.g. 47.375"
+        />
+    </div>
+    <div class="form-group">
+        <label for="longInput">Longitude</label>
+        <input type="text"
+               class="form-control"
+               id="longInput"
+               name="longInput"
+               placeholder="e.g. -122.10"
+        />
+    </div>
+    <div class="form-group">
+        <label for="sqftLiving15Input">Sqft of Living Room of 15 nearest neighbours</label>
+        <input type="text"
+               class="form-control"
+               id="sqftLiving15Input"
+               name="sqftLiving15Input"
+               placeholder="e.g. 2000"
+        />
+    </div>
+    <div class="form-group">
+        <label for="sqftLot15Input">Sqft of Lot of 15 nearest neighbours</label>
+        <input type="text"
+               class="form-control"
+               id="sqftLot15Input"
+               name="sqftLot15Input"
+               placeholder="e.g. 6000"
+        />
+    </div>
+    <div class="form-group">
+        <label for="updateInput">Updates</label>
+        <input type="text"
+               class="form-control"
+               id="updateInput"
+               name="updateInput"
+               placeholder="e.g. bedrooms,bathrooms,floors"
+        />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}

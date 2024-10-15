@@ -1,0 +1,15 @@
+{% extends "base.html" %}{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="height: 80vh;">
+  <div class="btn-group">
+    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Select Mode
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item " href="{{ url_for('views.showHouseInfo') }}">Single Player</a>
+      <a class="dropdown-item" href="{{ url_for('views.valuation') }}">House Price Predictor</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}{% block title %}Profile{% endblock %}
+
+{% block content %}
+<div class="container d-flex  align-items-center" style="height: 80vh;">
+  <div class="btn-group">
+    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Tasks
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Profile</a>
+      <a class="dropdown-item" href="#">Stats</a>
+      <a class="dropdown-item" href="#">Leaderboard</a>
+    </div>
+  </div>
+  <h2>User Information</h2>
+  <ul>
+    <li>Username: User[0]</li>
+    <li>Email Address: </li>
+    <li>Phone Number: </li>
+    <li>Password: ******** </li>
+  </ul>
+</div>
+{% endblock %}
